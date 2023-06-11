@@ -1,0 +1,15 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
+driver = webdriver.Chrome()
+driver.get("https://uz.gov.ua/")
+driver.set_window_size(1280, 572)
+driver.find_element(By.LINK_TEXT, "Пасажирам").click()
+driver.find_element(By.CSS_SELECTOR, ".incrumb1 > .level2 > .first span").click()
+driver.find_element(By.LINK_TEXT, "через сервіс придбання електронних проїзних документів").click()
+driver.find_element(By.LINK_TEXT, "Київ").click()
+driver.find_element(By.LINK_TEXT, "Харків").click()
+driver.find_element(By.NAME, "date-hover").click()
+driver.find_element(By.LINK_TEXT, "10").click()
+driver.find_element(By.CSS_SELECTOR, "div:nth-child(1) > button").click()
